@@ -21,4 +21,5 @@ List
 
 | Name | URL to `.lsrules` file | `x-littlesnitch:` URL |
 |-|-|-|
+| phishing | <https://little-snitch-rules.pages.dev/phishing.lsrules> | <x-littlesnitch:subscribe-rules?url=https%3A%2F%2Flittle-snitch-rules.pages.dev%phishing.lsrules> |
 | urlhaus | <https://little-snitch-rules.pages.dev/urlhaus.lsrules> | <x-littlesnitch:subscribe-rules?url=https%3A%2F%2Flittle-snitch-rules.pages.dev%2Furlhaus.lsrules> |
