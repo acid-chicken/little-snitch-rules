@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "esnext"
+    ],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "target": "esnext",
+    "types": [
+      "node"
+    ]
+  },
+  "include": [
+    "src/**/*.mjs"
+  ]
+}

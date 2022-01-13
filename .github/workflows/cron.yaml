@@ -1,0 +1,46 @@
+name: cron
+
+on:
+  schedule:
+  - cron: 0 1 * * *
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      NODE_OPTIONS: --max_old_space_size=7168
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: 16.x
+    - run: corepack yarn install --immutable --immutable-cache
+    - run: make
+    - run: tar -cjvCdist -fdist.tar.bz2 .
+    - uses: actions/upload-artifact@v2
+      with:
+        name: dist.tar.bz2
+        path: dist.tar.bz2
+        if-no-files-found: ignore
+  publish:
+    needs:
+    - build
+    runs-on: ubuntu-latest
+    env:
+      GIT_AUTHOR_EMAIL: github-actions[bot]@users.noreply.github.com
+      GIT_AUTHOR_NAME: github-actions[bot]
+      GIT_COMMITTER_EMAIL: github-actions[bot]@users.noreply.github.com
+      GIT_COMMITTER_NAME: github-actions[bot]
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: dist
+    - uses: actions/download-artifact@v2
+      with:
+        name: dist.tar.bz2
+        path: dist.tar.bz2
+    - run: tar -vxfdist.tar.bz2
+    - run: git add -A
+    - run: test -n "(git status -zu)" && git commit -m "$(date -u +%Y-%m-%d)"
+    - run: git push
