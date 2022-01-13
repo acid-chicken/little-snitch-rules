@@ -1,6 +1,8 @@
 little-snitch-rules
 ==
 
+[![cron](https://github.com/acid-chicken/little-snitch-rules/actions/workflows/cron.yaml/badge.svg)](https://github.com/acid-chicken/little-snitch-rules/actions/workflows/cron.yaml)
+
 Little Snitch Rules
 
 Usage
