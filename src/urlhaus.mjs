@@ -7,8 +7,8 @@ import { stderr, stdout } from 'process'
 const result = {
   name: `acid-chicken/little-snitch-rules#urlhaus`,
   descripion: `Built from Malicious URL Blocklist`,
-  [`denied-remote-addresses`]: [],
-  [`denied-remote-domains`]: [],
+  [`denied-remote-addresses`]: new Set(),
+  [`denied-remote-domains`]: new Set(),
 }
 const session = http2.connect(`https://malware-filter.pages.dev`)
 const domainsRequest = session.request({
@@ -31,10 +31,12 @@ function processEntry(entry) {
     return
   }
 
+  entry = entry.replace(/^\s+|\s+$/g, ``).replace(/(?<=^[\d.]*\.)0+(?=\d[\d.]*$)/, ``)
+
   if (isIP(entry)) {
-    result[`denied-remote-addresses`].push(entry)
+    result[`denied-remote-addresses`].add(entry)
   } else {
-    result[`denied-remote-domains`].push(entry)
+    result[`denied-remote-domains`].add(entry)
   }
 }
 
@@ -60,5 +62,5 @@ for await (const domainsResponseChunk of domainsRequest) {
 }
 
 session.close()
-stdout.write(`${JSON.stringify(result, null, 2)}
+stdout.write(`${JSON.stringify(result, (key, value) => value instanceof Set ? Array.from(value) : value, 2)}
 `)
