@@ -1,4 +1,4 @@
-#!/usr/bin/env corepack yarn node
+#!/usr/bin/env -S corepack yarn node
 
 import http2 from 'http2'
 import { isIP } from 'net'
