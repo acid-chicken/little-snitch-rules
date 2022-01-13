@@ -31,7 +31,7 @@ function processEntry(entry) {
     return
   }
 
-  entry = entry.replace(/^\s+|\s+$/g, ``).replace(/(?<=^[\d.]*\.)0+(?=\d[\d.]*$)/, ``)
+  entry = entry.replace(/^\s+|\s+$/g, ``).replace(/(?<=^[\d.]*\.)0+(?=\d[\d.]*$)/g, ``)
 
   if (isIP(entry)) {
     result[`denied-remote-addresses`].add(entry)
