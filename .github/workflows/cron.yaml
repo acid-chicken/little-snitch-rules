@@ -15,6 +15,7 @@ jobs:
     - uses: actions/setup-node@v2
       with:
         node-version: 16.x
+    - run: sudo ln -s "$(which corepack)" /usr/local/bin/corepack
     - run: corepack yarn install --immutable --immutable-cache
     - run: make
     - run: tar -cjvCdist -fdist.tar.bz2 .
