@@ -21,6 +21,7 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: dist.tar.bz2
+        path: dist.tar.bz2
         if-no-files-found: ignore
   publish:
     needs:
@@ -38,7 +39,6 @@ jobs:
     - uses: actions/download-artifact@v2
       with:
         name: dist.tar.bz2
-        path: dist.tar.bz2
     - run: tar -vxfdist.tar.bz2
     - run: git add -A
     - run: test -n "(git status -zu)" && git commit -m "$(date -u +%Y-%m-%d)"
