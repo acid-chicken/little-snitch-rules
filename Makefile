@@ -11,7 +11,7 @@ clean:
 	rm -rf $(OUT_DIR)
 
 malware-filter: $(OUT_DIR)
-	$(SRC_DIR)/malware-filter$(SRC_EXT) $(OUT_DIR)/urlhaus$(OUT_EXT) $(OUT_DIR)/phishing$(OUT_EXT)
+	$(SRC_DIR)/malware-filter$(SRC_EXT) $(OUT_DIR)/urlhaus$(OUT_EXT) $(OUT_DIR)/phishing$(OUT_EXT) $(OUT_DIR)/pup$(OUT_EXT)
 
 $(OUT_DIR):
 	mkdir -p $(OUT_DIR)
