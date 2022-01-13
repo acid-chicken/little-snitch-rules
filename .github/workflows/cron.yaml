@@ -21,7 +21,6 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: dist.tar.bz2
-        path: dist.tar.bz2
         if-no-files-found: ignore
   publish:
     needs:
