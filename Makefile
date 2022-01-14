@@ -3,12 +3,15 @@ OUT_EXT=.lsrules
 SRC_DIR=src
 SRC_EXT=.mjs
 
-.PHONY: all clean githubusercontent malware-filter
+.PHONY: all clean as githubusercontent malware-filter
 
-all: githubusercontent malware-filter
+all: as githubusercontent malware-filter
 
 clean:
 	rm -rf $(OUT_DIR)
+
+as: $(OUT_DIR)
+	$(SRC_DIR)/as$(SRC_EXT) $(OUT_DIR)/as$(OUT_EXT)
 
 githubusercontent: $(OUT_DIR)
 	$(SRC_DIR)/githubusercontent$(SRC_EXT) $(OUT_DIR)/easylist$(OUT_EXT) $(OUT_DIR)/easyprivacy$(OUT_EXT)
