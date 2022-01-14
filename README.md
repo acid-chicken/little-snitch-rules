@@ -21,6 +21,8 @@ List
 
 | Name | URL to `.lsrules` file | `x-littlesnitch:` URL |
 |-|-|-|
+| easylist | <https://little-snitch-rules.pages.dev/easylist.lsrules> | <x-littlesnitch:subscribe-rules?url=https%3A%2F%2Flittle-snitch-rules.pages.dev%2Feasylist.lsrules> |
+| easyprivacy | <https://little-snitch-rules.pages.dev/easyprivacy.lsrules> | <x-littlesnitch:subscribe-rules?url=https%3A%2F%2Flittle-snitch-rules.pages.dev%2Feasyprivacy.lsrules> |
 | phishing | <https://little-snitch-rules.pages.dev/phishing.lsrules> | <x-littlesnitch:subscribe-rules?url=https%3A%2F%2Flittle-snitch-rules.pages.dev%2Fphishing.lsrules> |
 | pup | <https://little-snitch-rules.pages.dev/pup.lsrules> | <x-littlesnitch:subscribe-rules?url=https%3A%2F%2Flittle-snitch-rules.pages.dev%2Fpup.lsrules> |
 | urlhaus | <https://little-snitch-rules.pages.dev/urlhaus.lsrules> | <x-littlesnitch:subscribe-rules?url=https%3A%2F%2Flittle-snitch-rules.pages.dev%2Furlhaus.lsrules> |
