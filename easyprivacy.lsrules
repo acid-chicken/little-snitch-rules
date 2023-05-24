@@ -2,6 +2,8 @@
   "name": "acid-chicken/little-snitch-rules#easyprivacy",
   "descripion": "Built from EasyPrivacy",
   "denied-remote-addresses": [
+    "34.215.155.61",
+    "44.228.85.26",
     "0.0.0.1",
     "185.193.38.148",
     "35.194.26.233",
@@ -18123,6 +18125,7 @@
     "sortsail.com",
     "sortstructure.com",
     "sortsummer.com",
+    "soundstocking.com",
     "sowlettuce.com",
     "spadelocket.com",
     "sparklesleet.com",
