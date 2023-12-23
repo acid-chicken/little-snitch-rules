@@ -2,6 +2,7 @@
   "name": "acid-chicken/little-snitch-rules#as",
   "descripion": "Built from as",
   "denied-remote-addresses": [
+    "10.0.0.1",
     "103.245.223.131",
     "103.245.223.194",
     "103.31.6.184",
@@ -302,6 +303,7 @@
     "125.76.224.250",
     "125.76.247.240",
     "125.76.247.250",
+    "127.0.0.1",
     "128.11.42.61",
     "128.121.236.169",
     "128.140.168.154",
@@ -9354,6 +9356,7 @@
     "99.63.194.183"
   ],
   "denied-remote-domains": [
+    "1-1ads.com",
     "101com.com",
     "101order.com",
     "180hits.de",
@@ -9441,6 +9444,7 @@
     "ad-balancer.net",
     "ad-cupid.com",
     "ad-delivery.net",
+    "ad-pay.de",
     "ad-rotator.com",
     "ad-score.com",
     "ad-server.gulasidorna.se",
@@ -9541,6 +9545,7 @@
     "adblade.com",
     "adblade.org",
     "adblockanalytics.com",
+    "adbooth.net",
     "adbot.com",
     "adbrite.com",
     "adbroker.de",
@@ -10284,7 +10289,6 @@
     "aliasanvil.com",
     "alikeaddition.com",
     "alipromo.com",
-    "all4spy.com",
     "allosponsor.com",
     "alluringbucket.com",
     "aloofmetal.com",
